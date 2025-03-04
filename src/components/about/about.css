@@ -15,9 +15,11 @@
   grid-template-columns: repeat(3, 140px);
   gap: 0.5rem;
   margin-bottom: var(--mb-2);
+  /* background-color: red; */
 }
 .about__box {
-  background-color: var(--container-color);
+  background-color: #10cae26e;
+  filter: drop-shadow(0 0.25rem 0.5rem rgba(121, 112, 112, 0.284));
   border: 1px solid rgb(0, 0, 0, 0.1);
   border-radius: 0.75rem;
   text-align: center;
@@ -60,6 +62,9 @@
 @media screen and (max-width: 768px){
   body {
     margin: 0 0 var(--header-height) 0;
+  }
+  .about__info{
+    grid-template-columns: repeat(2, 140px);
   }
   .section{
     padding: 2rem 0 4rem;
