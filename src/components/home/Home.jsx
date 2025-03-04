@@ -5,7 +5,6 @@ const Home = () => {
   return (
     <section className="home">
       <div className="home-hero">
-        
         <div className="text">
           <h1 className="typing-text">Frank Kamgang</h1>
           <div className="designer-title">
