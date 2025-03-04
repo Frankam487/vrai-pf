@@ -31,7 +31,7 @@ const Home = () => {
           <i className="uil uil-twitter"></i>
         </a>
         <a href="#" aria-label="Instagram">
-          <i className="uil uil-instagram"></i>
+          <i className="uil uil-github"></i>
         </a>
       </div>
     </section>
