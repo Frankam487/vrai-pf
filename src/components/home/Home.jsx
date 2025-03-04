@@ -13,7 +13,7 @@ const Home = () => {
           </div>
           <p>
             Développeur Web passionné, créant des expériences interactives et
-            immersives.
+            immersives <strong>.</strong>
           </p>
           <button>
             Découvrir 👋
@@ -29,10 +29,10 @@ const Home = () => {
         >
           <i className="uil uil-facebook"></i>
         </a>
-        <a href="#" aria-label="Twitter">
+        <a href="#" aria-label="whatsapp">
           <i className="uil uil-whatsapp"></i>
         </a>
-        <a href="https://github.com/Frankam487" aria-label="Instagram">
+        <a href="https://github.com/Frankam487" aria-label="github">
           <i className="uil uil-github"></i>
         </a>
       </div>
