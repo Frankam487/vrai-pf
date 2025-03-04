@@ -1,3 +1,4 @@
+import "./projet.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Navigation,
@@ -40,13 +41,16 @@ const projects = [
     title: "Projet 5",
     description:
       "Une plateforme de gestion de rendez-vous avec notifications automatiques.",
-    image: "https://source.unsplash.com/600x400/?appointment",
+    image: "../../assets/01.jpg",
   },
 ];
 
 const ProjectsCarousel = () => {
   return (
     <div className="carousel-container">
+      <div className="text">
+        <h2>Projects</h2>
+      </div>
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
         spaceBetween={50}
