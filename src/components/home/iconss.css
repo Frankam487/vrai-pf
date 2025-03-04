@@ -1,7 +1,8 @@
+/* Styles des icônes flottantes */
 .icons {
   position: fixed;
   left: 20px;
-  top: 55%;
+  top: 50%;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
@@ -16,23 +17,24 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: rgba(116, 175, 207, 0.275);
-
+  background: rgba(0, 200, 255, 0.2); /* Fond semi-transparent */
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
-} 
- .icons i {
+  box-shadow: 4px 4px 10px rgba(0, 200, 255, 0.5);
+  backdrop-filter: blur(5px); /* Effet de flou pour un rendu moderne */
+}
+
+.icons i {
   font-size: 1.7rem;
-  color: rgb(0, 0, 0);
+  color: #00c8ff;
   transition: transform 0.3s ease-in-out, color 0.3s;
 }
 
 .icons a:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 20px rgba(33, 31, 25, 0.7);
+  box-shadow: 0 4px 20px rgba(0, 200, 255, 0.7);
 }
 
 .icons a:hover i {
-  color: #00c8ff;
+  color: rgba(5, 38, 48, 0.7);
   transform: rotate(10deg);
 }

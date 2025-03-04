@@ -14,12 +14,12 @@ margin: 4px 67px;
   font-weight: bold;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid #ffcc00;
+  border-right: 3px solid #10cae26e;
   animation: blink 0.7s infinite alternate;
 }
 
 @keyframes blink {
-  from { border-right-color: #ffcc00; }
+  from { border-right-color: #10cae26e; }
   to { border-right-color: transparent; }
 }
 
@@ -60,7 +60,7 @@ margin: 4px 67px;
 }
 
 @keyframes blink {
-  from { border-right-color: #ffcc00; }
+  from { border-right-color: #10cae26e; }
   to { border-right-color: transparent; }
 }
 
@@ -103,7 +103,7 @@ button {
   align-items: center;
   gap: 10px;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 5px 15px rgba(255, 136, 0, 0.5);
+  box-shadow: 0 5px 15px rgba(5, 208, 222, 0.572);
   position: relative;
   overflow: hidden;
 }
@@ -161,9 +161,7 @@ border: 4px solid rgba(21, 23, 23, 0.309);
     align-items: center;
   }
 
-  .home-img {
-     /* padding: 200px 3px; */
-     
+  .home-img {    
      width: 90%;
      box-shadow: 10px 2px 39px 3px black;
   }
@@ -203,7 +201,7 @@ border: 4px solid rgba(21, 23, 23, 0.309);
     
   }
   .icons i {
-    color: rgb(150, 151, 57);
+    color: #10cae26e;
   }
 }
 
