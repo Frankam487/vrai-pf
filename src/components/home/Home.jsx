@@ -3,7 +3,6 @@ import "./iconss.css";
 import "./home.css";
 const Home = () => {
   return (
-    
     <section className="home">
       <div className="home-hero">
         <div className="text">
@@ -24,13 +23,16 @@ const Home = () => {
         <div className="home-img"></div>
       </div>
       <div className="icons">
-        <a href="#" aria-label="Facebook">
+        <a
+          href="https://www.facebook.com/Frankam.Shopping"
+          aria-label="Facebook"
+        >
           <i className="uil uil-facebook"></i>
         </a>
         <a href="#" aria-label="Twitter">
-          <i className="uil uil-twitter"></i>
+          <i className="uil uil-whatsapp"></i>
         </a>
-        <a href="#" aria-label="Instagram">
+        <a href="https://github.com/Frankam487" aria-label="Instagram">
           <i className="uil uil-github"></i>
         </a>
       </div>
