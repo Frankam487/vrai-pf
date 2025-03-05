@@ -1,7 +1,7 @@
-
 import "./iconss.css";
 import "./home.css";
 const Home = () => {
+  
   return (
     <section className="home">
       <div className="home-hero">

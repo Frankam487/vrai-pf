@@ -7,22 +7,27 @@ import Services from "./components/services/Services";
 import Skills from "./components/skills/Skills";
 import Testimonial from "./components/testimonial/Testimonial";
 import Project from "./components/project/Project";
+import Footer from "./components/footer/Footer";
+import Scroll from "./components/scroll/Scroll";
 
 const App = () => {
   return (
     <div>
       <Header />
-      <div className="main ">
+      <main className="main ">
         <Home />
         <About />
         <Skills />
         <Project />
-        
         <Services />
         <Qualif />
         <Testimonial />
         <Contact />
-      </div>
+      </main>
+
+      
+      <Footer />
+      <Scroll/>
     </div>
   );
 };
