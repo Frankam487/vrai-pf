@@ -60,6 +60,12 @@ padding: 2px;
     top: initial;
     bottom: 0;
   }
+  .active-link{
+      /* position: relative; */
+border-bottom: 3px solid rgba(255, 255, 255, 0);
+/* border-radius: 2px; */
+/* padding: 2px; */
+  }
 
   .nav{
     height: var(--header-height);
