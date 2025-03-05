@@ -6,11 +6,17 @@
   z-index: var(--z-fixed);
  background-color:  var(--body-color);
 }
-/* .scroll-header{
+.active-link{
+  background-color: red;
+}
+.scroll-header{
   
   background-color: var(--container-color);
-  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.1);
-} */
+  box-shadow: 12px -2px 24px rgba(0, 0, 0, 0.1);
+  /* opacity: 0.9; */
+  /* color: aliceblue; */
+
+}
 .nav{
   height: calc(var(--header-height) + 1.5rem);
   display: flex;
