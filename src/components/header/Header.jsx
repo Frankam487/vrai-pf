@@ -20,7 +20,7 @@ const [active, setActive] = useState("#home")
         <div className={toggle ? "nav__menu show-menu" : "nav__menu"}>
           <ul className="nav__list grid">
             <li className="nav__item">
-              <a href="#home"  onClick={() => setActive('#home ')} className={active === "#home" ? "nav__link active-link" : "nav__link"}>
+              <a href="#home"  onClick={() => setActive('#home')} className={active === "#home" ? "nav__link active-link" : "nav__link"}>
                 <i className="uil uil-estate nav__icon"> </i>Acceuil
               </a>
             </li>
@@ -31,7 +31,7 @@ const [active, setActive] = useState("#home")
             </li>
 
             <li className="nav__item">
-              <a href="#skills" className="nav__link">
+              <a href="#skill" onClick={() => setActive('#skill')} className={active === "#skill" ? "nav__link active-link" : "nav__link"}>
                 <i className="uil uil-file-alt nav__icon"></i>Skills
               </a>
             </li>
