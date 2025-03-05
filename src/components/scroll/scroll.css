@@ -1,41 +1,44 @@
 .scroll {
   position: fixed;
-  right: 2.5rem;
-  bottom: -20%;
-  background-color: rgb(0, 0, 0);
-  opacity: 0.8;
+  right: 2rem;
+  bottom: -4rem; 
+  background-color: rgba(0, 0, 0, 0.8);
   color: azure;
-  padding: 0.3rem 0.5rem;
-  border-radius: .4rem;
-  z-index: var(--z-tooltip);
-  transition: .4s;
-}
-.scroll__icon {
-  font-size: 1.5rem;
-  color: var(--container-color);
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.4rem;
+  z-index: 1000;
+  transition: bottom 0.4s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0; 
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.scroll:hover{
-  background-color: var(--title-color-dark);
+.scroll__icon {
+  font-size: 1.5rem;
+  color: white;
 }
-.show-scroll{
-  bottom: 3rem;
+
+
+
+.show-scroll {
+  bottom: 2rem;
+  opacity: 1;
 }
 
 @media screen and (max-width: 992px) {
-  .scroll{
+  .scroll {
     right: 1.5rem;
-    bottom: 4rem;
-    padding: 0.25rem 0.4rem;
+    padding: 0.5rem 0.7rem;
   }
-  .scroll__icon{
+  .scroll__icon {
     font-size: 1.25rem;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .show-scroll{
-    bottom: 4rem;
+  .show-scroll {
+    bottom: 3rem;
   }
 }
-

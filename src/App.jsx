@@ -24,8 +24,6 @@ const App = () => {
         <Testimonial />
         <Contact />
       </main>
-
-      
       <Footer />
       <Scroll/>
     </div>
