@@ -6,7 +6,7 @@ const Commits = () => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    if (count < 850) {
+    if (count < 837) {
       const interval = setInterval(() => {
         setCount((prev) => Math.min(prev + Math.floor(Math.random() * 20 + 1), 850));
       }, 30);
