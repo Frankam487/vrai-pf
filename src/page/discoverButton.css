@@ -1,90 +1,114 @@
-/* Container du bouton et de la section cachée */
+
 .discover-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   margin-top: 50px;
+  position: relative;
 }
 
-/* Le bouton "Découvrir" */
+
 .discover-button {
-  padding: 16px 32px;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: #fff;
   font-size: 1.2rem;
   font-weight: bold;
-  background: linear-gradient(45deg, #4e5eff, #0099cc);
-  color: #fff;
-  border: none;
+  padding: 15px 30px;
+  border: 2px solid transparent;
   border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, background 0.3s ease;
+  z-index: 1;
 }
 
-.discover-button:hover {
-  transform: scale(1.1);
-  background: linear-gradient(45deg, #0088cc, #00aaff);
+.discover-button .discover-text {
+  transition: opacity 0.3s ease;
 }
 
-/* Contenu caché qui apparaît au clic */
-.discover-content {
-  margin-top: 30px;
-  padding: 2rem;
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  width: 90%;
-  max-width: 600px;
-  text-align: center;
+.discover-button .arrow {
+  margin-left: 15px;
+  transition: transform 0.3s ease;
+}
+
+
+.discover-button.open {
+  background: linear-gradient(135deg, #42a5f5, #478ed1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.discover-button.open .discover-text {
   opacity: 0;
-  transform: translateY(-20px);
-  animation: fadeIn 0.8s forwards;
 }
 
-/* Lien dans la section qui apparaît */
-.discover-link {
-  display: inline-block;
-  margin-top: 1.5rem;
-  padding: 10px 20px;
-  background: #ff5d5d;
-  color: #fff;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease;
+.discover-button.open .arrow {
+  transform: rotate(90deg);
 }
 
-.discover-link:hover {
-  background: #e04343;
+
+.discover-content {
+  background-color: #fff;
+  padding: 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.7s forwards;
 }
 
-/* Animation fade-in pour la section */
-@keyframes fadeIn {
-  0% {
+
+@keyframes fadeInUp {
+  from {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(20px);
   }
-  100% {
+  to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* Responsive Design pour mobile */
+
+.discover-link {
+  color: #42a5f5;
+  font-size: 1.1rem;
+  margin-top: 15px;
+  display: inline-block;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.discover-link:hover {
+  color: #1e88e5;
+}
+
 @media (max-width: 768px) {
   .discover-button {
-    font-size: 1rem;
-    padding: 12px 24px;
+    padding: 12px 25px;
+    font-size: 1.1rem;
   }
 
   .discover-content {
-    padding: 1.5rem;
+    padding: 20px;
   }
+} 
 
-  .discover-link {
-    font-size: 1rem;
-  }
+
+
+.discover-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  position: relative;
+  z-index: 10000;
 }
+

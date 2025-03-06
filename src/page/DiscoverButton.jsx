@@ -10,15 +10,16 @@ const DiscoverButton = () => {
 
   return (
     <div className="discover-container">
-      <button className="discover-button" onClick={toggleSection}>
-        Découvrir
+      <button className={`discover-button ${isOpen ? "open" : ""}`} onClick={toggleSection}>
+        <span className="discover-text">Découvrir</span>
+        <span className={`arrow ${isOpen ? "rotate" : ""}`}>→</span>
       </button>
       {isOpen && (
         <div className="discover-content">
           <h2>Bienvenue sur mon portfolio !</h2>
           <p>
-            Ici vous trouverez une sélection de mes projets, ainsi que des informations
-            sur mes compétences et mon parcours. J'espère que vous apprécierez mon travail.
+            Découvrez mes projets et apprenez-en plus sur mon parcours professionnel.
+            J'espère que vous trouverez ce que vous cherchez ici !
           </p>
           <a href="#projet" className="discover-link">
             Voir mes projets

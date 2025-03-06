@@ -25,7 +25,7 @@ const Home = () => {
           </p>
           <button className="toggle-button" onClick={toggleDiscover}>
             {showDiscover ? "Cacher" : "Découvrir 👋"}
-            <i className="uil uil-arrow-right"></i>
+            {/* <i className="uil uil-arrow-right"></i> */}
           </button>
         </div>
         <div className="home-img">
@@ -46,7 +46,7 @@ const Home = () => {
         </a>
       </div>
 
-      {/* Display the DiscoverButton conditionally */}
+      
       {showDiscover && <DiscoverButton />}
     </section>
   );
