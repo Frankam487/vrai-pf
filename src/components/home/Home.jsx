@@ -2,12 +2,14 @@ import "./iconss.css";
 import "./home.css";
 import DiscoverButton from "../../page/DiscoverButton";
 import { useState } from "react";
+
 const Home = () => {
   const [showDiscover, setShowDiscover] = useState(false);
 
   const toggleDiscover = () => {
     setShowDiscover(!showDiscover);
   };
+
   return (
     <section className="home">
       <div className="home-hero">
@@ -21,22 +23,19 @@ const Home = () => {
             Développeur Web passionné, créant des expériences interactives et
             immersives <strong>.</strong>
           </p>
-          {/* <button>
-            Découvrir 👋
-            <i className="uil uil-arrow-right"></i>
-          </button> */}
           <button className="toggle-button" onClick={toggleDiscover}>
             {showDiscover ? "Cacher" : "Découvrir 👋"}
             <i className="uil uil-arrow-right"></i>
           </button>
         </div>
-        <div className="home-img"></div>
+        <div className="home-img">
+          {/* Optionally add an image or animation here */}
+        </div>
       </div>
+
+      {/* Social Media Icons */}
       <div className="icons">
-        <a
-          href="https://www.facebook.com/Frankam.Shopping"
-          aria-label="Facebook"
-        >
+        <a href="https://www.facebook.com/Frankam.Shopping" aria-label="Facebook">
           <i className="uil uil-facebook"></i>
         </a>
         <a href="#" aria-label="whatsapp">
@@ -45,8 +44,10 @@ const Home = () => {
         <a href="https://github.com/Frankam487" aria-label="github">
           <i className="uil uil-github"></i>
         </a>
-        {showDiscover && <DiscoverButton />}
       </div>
+
+      {/* Display the DiscoverButton conditionally */}
+      {showDiscover && <DiscoverButton />}
     </section>
   );
 };
