@@ -9,6 +9,7 @@ import Testimonial from "./components/testimonial/Testimonial";
 import Project from "./components/project/Project";
 import Footer from "./components/footer/Footer";
 import Scroll from "./components/scroll/Scroll";
+import Commits from "./components/commits/Commits";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
       </main>
       <Footer />
       <Scroll/>
+        <Commits/>
     </div>
   );
 };

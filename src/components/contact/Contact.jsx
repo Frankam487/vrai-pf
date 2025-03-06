@@ -1,6 +1,6 @@
+import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import "./contact.css";
-import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const form = useRef();
@@ -15,7 +15,7 @@ const Contact = () => {
     try {
       await emailjs.sendForm(
         "service_c86lqvr",
-        "template_bh4lz4g",
+        "template_v7ax7aq",
         form.current,
         "oWOVpS-iVoTp9hWHE"
       );
@@ -87,47 +87,40 @@ const Contact = () => {
         <div className="contact__content">
           <h3 className="contact__title">Écrivez-moi votre projet</h3>
           <form ref={form} onSubmit={sendEmail} className="contact__form">
-            <div className="contact__form-div">
-              <label className="contact__form-tag">Nom</label>
-              <input
-                type="text"
-                name="name"
-                className="contact__form-input"
-                placeholder="Insérez votre nom"
-                required
-              />
-            </div>
+  <div className="contact__form-div">
+    <label htmlFor="" className="contact__form-tag">Name</label>
+    <input
+      type="text"
+      name="from_name" 
+      className="contact__form-input"
+      placeholder="Insert ton nom"
+    />
+  </div>
 
-            <div className="contact__form-div">
-              <label className="contact__form-tag">Email</label>
-              <input
-                type="email"
-                name="email"
-                className="contact__form-input"
-                placeholder="Insérez votre email"
-                required
-              />
-            </div>
+  <div className="contact__form-div">
+    <label htmlFor="" className="contact__form-tag">Email</label>
+    <input
+      type="email"
+      name="user_email" 
+      className="contact__form-input"
+      placeholder="Insert ton email"
+    />
+  </div>
 
-            <div className="contact__form-div">
-              <label className="contact__form-tag">Projet</label>
-              <textarea
-                name="project"
-                cols="30"
-                rows="10"
-                className="contact__form-input"
-                placeholder="Écrivez votre idée de projet"
-                required
-              ></textarea>
-            </div>
+  <div className="contact__form-div">
+    <label htmlFor="" className="contact__form-tag">Message</label>
+    <textarea
+      name="message" 
+      cols="30"
+      rows="10"
+      className="contact__form-input"
+      placeholder="Ecris ton message"
+    ></textarea>
+  </div>
 
-            <input
-              type="submit"
-              value={loading ? "Envoi en cours..." : "Envoyer"}
-              className="button button--flex"
-              disabled={loading}
-            />
-          </form>
+  <input type="submit" value="Envoyer" className="button button--flex" />
+</form>
+
           {message && <p className="contact__message">{message}</p>}
         </div>
       </div>
