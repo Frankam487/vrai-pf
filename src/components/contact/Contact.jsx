@@ -1,5 +1,35 @@
+import { useRef, useState } from "react";
 import "./contact.css";
+import emailjs from "@emailjs/browser";
+
 const Contact = () => {
+  const form = useRef();
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+
+  const sendEmail = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setMessage("");
+
+    try {
+      await emailjs.sendForm(
+        "service_c86lqvr",
+        "template_bh4lz4g",
+        form.current,
+        "oWOVpS-iVoTp9hWHE"
+      );
+
+      setMessage("Votre message a bien été envoyé !");
+      e.target.reset();
+    } catch (error) {
+      setMessage("Une erreur s'est produite, veuillez réessayer.");
+      console.error("Erreur d'envoi :", error);
+    }
+
+    setLoading(false);
+  };
+
   return (
     <section className="contact container section" id="contact">
       <h2 className="section__title">
@@ -14,36 +44,40 @@ const Contact = () => {
           <div className="contact__info">
             <div className="contact__card">
               <i className="bx bx-mail-send contact__card-icon"></i>
-
               <h3 className="contact__card-title">Email</h3>
               <span className="contact__card-data">Frankamdev@gmail.com</span>
               <a href="mailto:frankamdev@gmail.com" className="contact__button">
-                Ecrivez moi{" "}
+                Écrivez-moi{" "}
                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
               </a>
             </div>
 
             <div className="contact__card">
               <i className="bx bxl-whatsapp contact__card-icon"></i>
-
-              <h3 className="contact__card-title">Whatsapp</h3>
+              <h3 className="contact__card-title">WhatsApp</h3>
               <span className="contact__card-data">+237 690 461 830</span>
               <a
-                href="https://api.whatsapp.com/send?phone=690461830&text=Salut, comment ca va ?"
+                href="https://api.whatsapp.com/send?phone=+237690461830&text=Salut, comment ça va ?"
                 className="contact__button"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Ecrivez moi
+                Écrivez-moi{" "}
                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
               </a>
             </div>
 
             <div className="contact__card">
               <i className="bx bxl-messenger contact__card-icon"></i>
-
               <h3 className="contact__card-title">Messenger</h3>
               <span className="contact__card-data">user.fb123</span>
-              <a href="" className="contact__button">
-                Ecrivez moi
+              <a
+                href="https://m.me/user.fb123"
+                className="contact__button"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Écrivez-moi{" "}
                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
               </a>
             </div>
@@ -51,47 +85,50 @@ const Contact = () => {
         </div>
 
         <div className="contact__content">
-          <h3 className="contact__title">Ecrivez moi votre projet</h3>
-          <form className="contact__form">
+          <h3 className="contact__title">Écrivez-moi votre projet</h3>
+          <form ref={form} onSubmit={sendEmail} className="contact__form">
             <div className="contact__form-div">
-              <label htmlFor="" className="contact__form-tag">
-                Name
-              </label>
+              <label className="contact__form-tag">Nom</label>
               <input
                 type="text"
                 name="name"
                 className="contact__form-input"
-                placeholder="Insert ton nom"
+                placeholder="Insérez votre nom"
+                required
               />
             </div>
 
             <div className="contact__form-div">
-              <label htmlFor="" className="contact__form-tag">
-                Email
-              </label>
+              <label className="contact__form-tag">Email</label>
               <input
                 type="email"
-                name="name"
+                name="email"
                 className="contact__form-input"
-                placeholder="Insert ton nom"
+                placeholder="Insérez votre email"
+                required
               />
             </div>
 
             <div className="contact__form-div">
-              <label htmlFor="" className="contact__form-tag">
-                Project
-              </label>
+              <label className="contact__form-tag">Projet</label>
               <textarea
                 name="project"
                 cols="30"
                 rows="10"
-                id=""
                 className="contact__form-input"
-                placeholder="Ecris ton idee de projet"
+                placeholder="Écrivez votre idée de projet"
+                required
               ></textarea>
             </div>
-            <button className="button button--flex">Envoyer</button>
+
+            <input
+              type="submit"
+              value={loading ? "Envoi en cours..." : "Envoyer"}
+              className="button button--flex"
+              disabled={loading}
+            />
           </form>
+          {message && <p className="contact__message">{message}</p>}
         </div>
       </div>
     </section>
