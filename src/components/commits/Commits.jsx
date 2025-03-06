@@ -1,7 +1,6 @@
+import { useEffect, useState } from "react";
+import { FaGithub } from "react-icons/fa";
 import "./commits.css";
-
-import { useState, useEffect } from "react";
-
 
 const Commits = () => {
   const [count, setCount] = useState(0);
@@ -10,27 +9,26 @@ const Commits = () => {
     if (count < 850) {
       const interval = setInterval(() => {
         setCount((prev) => Math.min(prev + Math.floor(Math.random() * 20 + 1), 850));
-      }, 50);
+      }, 30);
       return () => clearInterval(interval);
     }
   }, [count]);
 
+  const resetCounter = () => {
+    setCount(0);
+  };
+
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-900">
-      <div
-        className=""
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
-      >
-        <h1 className="">Nombre de Commits</h1>
-        <p
-          className=""
-          
-        >
-          {count}
-        </p>
-      </div>
+    <div className="commits-container">
+      <h1 className="commits-title">Nombre de Commits</h1>
+      <p className="commits-count">
+        <a href="https://github.com/Frankam487">
+        {count} -> <FaGithub className="github-icon" />
+        </a>
+      </p>
+      <button className="reset-button" onClick={resetCounter}>
+        Reset
+      </button>
     </div>
   );
 };

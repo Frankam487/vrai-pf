@@ -17,6 +17,7 @@ const App = () => {
       <Header />
       <main className="main ">
         <Home />
+        <Commits/>
         <About />
         <Skills />
         <Project />
@@ -27,7 +28,6 @@ const App = () => {
       </main>
       <Footer />
       <Scroll/>
-        <Commits/>
     </div>
   );
 };
