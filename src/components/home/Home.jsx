@@ -1,7 +1,13 @@
 import "./iconss.css";
 import "./home.css";
+import DiscoverButton from "../../page/DiscoverButton";
+import { useState } from "react";
 const Home = () => {
-  
+  const [showDiscover, setShowDiscover] = useState(false);
+
+  const toggleDiscover = () => {
+    setShowDiscover(!showDiscover);
+  };
   return (
     <section className="home">
       <div className="home-hero">
@@ -15,8 +21,12 @@ const Home = () => {
             Développeur Web passionné, créant des expériences interactives et
             immersives <strong>.</strong>
           </p>
-          <button>
+          {/* <button>
             Découvrir 👋
+            <i className="uil uil-arrow-right"></i>
+          </button> */}
+          <button className="toggle-button" onClick={toggleDiscover}>
+            {showDiscover ? "Cacher" : "Découvrir 👋"}
             <i className="uil uil-arrow-right"></i>
           </button>
         </div>
@@ -35,6 +45,7 @@ const Home = () => {
         <a href="https://github.com/Frankam487" aria-label="github">
           <i className="uil uil-github"></i>
         </a>
+        {showDiscover && <DiscoverButton />}
       </div>
     </section>
   );
