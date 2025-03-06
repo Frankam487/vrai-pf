@@ -47,7 +47,7 @@ const projects = [
 
 const ProjectsCarousel = () => {
   return (
-    <div className="carousel-container">
+    <div className="carousel-container" id="projet">
       <div className="text">
         <h2>Projects</h2>
       </div>

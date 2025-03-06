@@ -20,7 +20,7 @@ const DiscoverButton = () => {
             Ici vous trouverez une sélection de mes projets, ainsi que des informations
             sur mes compétences et mon parcours. J'espère que vous apprécierez mon travail.
           </p>
-          <a href="#projects" className="discover-link">
+          <a href="#projet" className="discover-link">
             Voir mes projets
           </a>
         </div>
