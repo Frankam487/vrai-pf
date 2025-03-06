@@ -23,7 +23,7 @@ const Commits = () => {
       <h1 className="commits-title">Nombre de Commits</h1>
       <p className="commits-count">
         <a href="https://github.com/Frankam487">
-        {count} -> <FaGithub className="github-icon" />
+        {count} <strong>-></strong> <FaGithub className="github-icon" />
         </a>
       </p>
       <button className="reset-button" onClick={resetCounter}>
