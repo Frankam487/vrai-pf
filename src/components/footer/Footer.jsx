@@ -32,8 +32,9 @@ const Footer = () => {
         </div>
 
         <span className="footer__copy">
-          &#189; copy; Frankam. Tous droits réservés
+          &#169; 2025 Frankam. Tous droits réservés
         </span>
+
       </div>
     </footer>
   );
