@@ -2,6 +2,7 @@ import "./iconss.css";
 import "./home.css";
 import DiscoverButton from "../../page/DiscoverButton";
 import { useState } from "react";
+import { FaFacebook, FaWhatsapp, FaGithub } from 'react-icons/fa'; // Import des icônes
 
 const Home = () => {
   const [showDiscover, setShowDiscover] = useState(false);
@@ -35,14 +36,19 @@ const Home = () => {
 
       {/* Social Media Icons */}
       <div className="icons">
+        {/* Facebook */}
         <a href="https://www.facebook.com/Frankam.Shopping" aria-label="Facebook">
-          <i className="uil uil-facebook"></i>
+          <FaFacebook size={30} color="#1877F2" /> {/* Icône Facebook */}
         </a>
+
+        {/* WhatsApp */}
         <a href="#" aria-label="whatsapp">
-          <i className="uil uil-whatsapp"></i>
+          <FaWhatsapp size={30} color="#25D366" /> {/* Icône WhatsApp */}
         </a>
+
+        {/* GitHub */}
         <a href="https://github.com/Frankam487" aria-label="github">
-          <i className="uil uil-github"></i>
+          <FaGithub size={30} color="#000000" /> {/* Icône GitHub */}
         </a>
       </div>
 

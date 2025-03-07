@@ -10,7 +10,8 @@
 
 .discover-button {
   background: linear-gradient(135deg, #ff7e5f, #feb47b);
-  color: #fff;
+  
+  color: #000000;
   font-size: 1.2rem;
   font-weight: bold;
   padding: 15px 30px;
@@ -62,6 +63,7 @@
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.7s forwards;
+  display: block;
 }
 
 
@@ -78,7 +80,7 @@
 
 
 .discover-link {
-  color: #42a5f5;
+  color: #ffffff;
   font-size: 1.1rem;
   margin-top: 15px;
   display: inline-block;
@@ -95,7 +97,7 @@
     padding: 12px 25px;
     font-size: 1.1rem;
   }
-
+  
   .discover-content {
     padding: 20px;
   }
@@ -109,6 +111,54 @@
   align-items: center;
   margin-top: 50px;
   position: relative;
+  display: block;
   z-index: 10000;
 }
+ 
+.discover-button {
+  background-color: #10cae2;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
 
+.discover-button.open {
+  background-color: #f25c5c;
+}
+
+.discover-text {
+  margin-right: 10px;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.arrow.rotate {
+  transform: rotate(90deg);
+}
+
+
+.discover-content {
+  margin-top: 20px;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.discover-link {
+  color: #239bb1;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.discover-link:hover {
+  text-decoration: underline;
+}

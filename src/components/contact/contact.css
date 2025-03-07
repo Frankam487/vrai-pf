@@ -147,9 +147,28 @@
 
 
 
-/* Responsive */
 @media (min-width: 768px) {
   .contact__container {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+.contact__card-icon {
+  color: #555; /* Couleur par défaut */
+  transition: color 0.3s ease;
+}
+
+.contact__card-icon.facebook {
+  color: #3b5998;
+}
+
+.contact__card-icon.whatsapp {
+  color: #25d366;
+}
+
+.contact__card-icon.messenger {
+  color: #0084ff; 
+}
+
+.contact__card-icon:hover {
+  color: #ff7a59; 
 }

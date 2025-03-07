@@ -10,10 +10,13 @@ const DiscoverButton = () => {
 
   return (
     <div className="discover-container">
+      {/* Bouton qui change de texte et d'animation au clic */}
       <button className={`discover-button ${isOpen ? "open" : ""}`} onClick={toggleSection}>
-        <span className="discover-text">Découvrir</span>
+        <span className="discover-text">{isOpen ? "Fermer" : "Découvrir"}</span>
         <span className={`arrow ${isOpen ? "rotate" : ""}`}>→</span>
       </button>
+
+      {/* Section qui se montre au clic */}
       {isOpen && (
         <div className="discover-content">
           <h2>Bienvenue sur mon portfolio !</h2>
