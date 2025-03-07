@@ -74,3 +74,25 @@
     font-size: 1rem;
   }
 }
+.footer__social a {
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-icon {
+  transition: color 0.3s ease;
+}
+
+.facebook {
+  color: #5981d6;
+}
+
+.whatsapp {
+  color: #25d366; 
+}
+
+.github {
+  color: #fff9f9; 
+}
+
+
