@@ -1,16 +1,9 @@
 import "./projet.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Navigation,
-  Pagination,
-  Autoplay,
-  EffectCoverflow,
-} from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/effect-coverflow";
-// import "./projet.scss";
 
 const projects = [
   {
@@ -29,7 +22,7 @@ const projects = [
     title: "Projet 3",
     description:
       "Un portfolio interactif mettant en avant des compétences techniques.",
-    image: "https://source.unsplash.com/600x400/?portfolio",
+    image: "/laptop.jpg",
   },
   {
     title: "Projet 4",
@@ -48,37 +41,33 @@ const projects = [
 const ProjectsCarousel = () => {
   return (
     <div className="carousel-container" id="projet">
-      <div className="text">
-        <h2>Projects</h2>
-      </div>
+      <h2 className="carousel-title-section">💡 Mes Projets</h2>
       <Swiper
-        modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
-        spaceBetween={50}
-        slidesPerView={3}
-        centeredSlides={true}
-        effect="coverflow"
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
+        modules={[Navigation, Pagination, Autoplay]}
+        spaceBetween={20}
+        slidesPerView={1}
         navigation
         pagination={{ clickable: true }}
-        autoplay={{ delay: 2500, disableOnInteraction: false }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        breakpoints={{
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
         className="carousel"
       >
         {projects.map((project, index) => (
           <SwiperSlide key={index} className="carousel-slide">
-            <img
-              src={project.image}
-              alt={project.title}
-              className="carousel-image"
-            />
-            <div className="carousel-content">
-              <h3 className="carousel-title">{project.title}</h3>
-              <p className="carousel-description">{project.description}</p>
+            <div className="carousel-card">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="carousel-image"
+              />
+              <div className="carousel-content">
+                <h3 className="carousel-project-title">{project.title}</h3>
+                <p className="carousel-description">{project.description}</p>
+              </div>
             </div>
           </SwiperSlide>
         ))}
