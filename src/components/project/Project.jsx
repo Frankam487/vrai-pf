@@ -7,14 +7,14 @@ import "swiper/css/pagination";
 
 const projects = [
   {
-    title: "Projet 1",
+    title: "Oomiie Services",
     description:
       "Une application web innovante qui simplifie la gestion des tâches.",
     image: "./laptop.jpg",
     link: "https://www.omiie.devfack.com",
   },
   {
-    title: "Projet 2",
+    title: "House beauty",
     description:
       "Un site e-commerce moderne avec une interface utilisateur dynamique.",
     image: "./laptop.jpg",
