@@ -12,6 +12,9 @@
   border: 1px solid rgba(0,0,0,0.1);
   
 }
+body {
+  background-color: red;
+}
 .services__icon {
   display: block;
   font-size: 2rem;
