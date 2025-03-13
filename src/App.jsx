@@ -15,6 +15,7 @@ const App = () => {
   return (
     <div>
       <Header />
+      
       <main className="main ">
         <Home />
         <Commits/>
