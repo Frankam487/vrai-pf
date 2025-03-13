@@ -1,6 +1,5 @@
 .services__container 
 {
- 
   grid-template-columns: repeat(3, 270px);
   justify-content: center;
   column-gap: 1.8rem;
@@ -12,7 +11,7 @@
   background-color: var(--container-color);
   padding: 6rem 0 2rem 2.5rem;
   border: 1px solid rgba(0,0,0,0.1);
-  /* background-color: red; */
+  
 }
 .services__icon {
   display: block;
@@ -82,7 +81,7 @@ transform: translateX(0.25rem);
   color: rgb(0, 0, 0);
   font-size: 2rem;
   font-family: serif;
-  /* background-color: red; */
+
 
 }
 .services__modal-title, .services__modal-description{
@@ -99,7 +98,7 @@ text-align: center;
   font-size: var(--small-font-size);
   padding: 0 3.5rem;
   margin-bottom: var(--mb-2);
-/* background-color: red; */
+
 margin: 15px 0;
 
 }

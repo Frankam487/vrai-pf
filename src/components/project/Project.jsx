@@ -12,6 +12,7 @@ const projects = [
       "Une application web innovante qui simplifie la gestion des tâches.",
     image: "./laptop.jpg",
     link: "https://www.omiie.devfack.com",
+    
   },
   {
     title: "House beauty",
@@ -63,17 +64,17 @@ const ProjectsCarousel = () => {
         {projects.map((project, index) => (
           <SwiperSlide key={index} className="carousel-slide">
             <div className="carousel-card">
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
+              
                 <img
                   src={project.image}
                   alt={project.title}
                   className="carousel-image"
                 />
-              </a>
               <div className="carousel-content">
                 <h3 className="carousel-project-title">{project.title}</h3>
                 <p className="carousel-description">{project.description}</p>
               </div>
+              <a href={project.link} target="_blank" className="project-link" rel="noopener noreferrer">Voir plus... </a>
             </div>
           </SwiperSlide>
         ))}

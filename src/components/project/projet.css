@@ -57,11 +57,20 @@
   font-weight: bold;
   margin-top: 10px;
 }
-
+.project-link{
+  background-color: transparent;
+  padding: 10px;
+  color: #08080a;
+  border-radius: 4px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
 .carousel-description {
   font-size: 1rem;
   opacity: 0.9;
   margin-top: 5px;
+  color: #030101be;
+  font-weight: bold;
 }
 
 /* Responsive */
