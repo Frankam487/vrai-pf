@@ -10,31 +10,35 @@ const projects = [
     title: "Projet 1",
     description:
       "Une application web innovante qui simplifie la gestion des tâches.",
-    image: "https://source.unsplash.com/600x400/?technology",
+    image: "./laptop.jpg",
+    link: "https://www.omiie.devfack.com",
   },
   {
     title: "Projet 2",
     description:
       "Un site e-commerce moderne avec une interface utilisateur dynamique.",
-    image: "https://source.unsplash.com/600x400/?ecommerce",
+    image: "./laptop.jpg",
+    link: "https://www.google.com",
   },
   {
     title: "Projet 3",
     description:
       "Un portfolio interactif mettant en avant des compétences techniques.",
-    image: "/laptop.jpg",
+    image: "./laptop.jpg",
+    link: "https://www.google.com",
   },
   {
     title: "Projet 4",
     description:
       "Un blog avec un design épuré et une gestion optimisée du contenu.",
-    image: "https://source.unsplash.com/600x400/?blog",
+    image: "./laptop.jpg",
   },
   {
     title: "Projet 5",
     description:
       "Une plateforme de gestion de rendez-vous avec notifications automatiques.",
-    image: "../../assets/01.jpg",
+    image: "./laptop.jpg",
+    link: "https://www.google.com",
   },
 ];
 
@@ -59,11 +63,13 @@ const ProjectsCarousel = () => {
         {projects.map((project, index) => (
           <SwiperSlide key={index} className="carousel-slide">
             <div className="carousel-card">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="carousel-image"
-              />
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="carousel-image"
+                />
+              </a>
               <div className="carousel-content">
                 <h3 className="carousel-project-title">{project.title}</h3>
                 <p className="carousel-description">{project.description}</p>
