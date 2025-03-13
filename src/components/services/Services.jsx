@@ -14,7 +14,7 @@ const Services = () => {
       <span className="section__subtitle">Ce que j'offre en développement web</span>
 
       <div className="services__container container grid">
-        {/* Service 1: Développement Front-End */}
+        
         <div className="services__content">
           <div>
             <i className="uil uil-web-grid services__icon"></i>
