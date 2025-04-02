@@ -1,6 +1,7 @@
 import Backendend from "./Backendend";
 import Frontend from "./Frontend";
-import "./skills.css"
+import "./skills.css";
+import React from 'react';
 const Skills = () => {
   return (
     <section className="skills section" id="skills">

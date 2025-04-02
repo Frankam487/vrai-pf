@@ -5,7 +5,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Data } from "./Data";
 import "./testimonial.css";
-
+import React from 'react';
 const Testimonial = () => {
   return (
     <section className="testi container section">

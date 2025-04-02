@@ -1,4 +1,5 @@
-import { FaFacebook, FaWhatsapp, FaGithub } from "react-icons/fa"; // Importation des icônes depuis react-icons/fa
+import { FaFacebook, FaWhatsapp, FaGithub } from "react-icons/fa"; 
+import React from 'react';
 import "./footer.css";
 
 const Footer = () => {

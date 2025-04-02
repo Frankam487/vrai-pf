@@ -1,6 +1,7 @@
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
-import { FaEnvelope as EnvelopeIcon, FaWhatsapp as WhatsappIcon, FaFacebookMessenger as MessengerIcon, FaArrowRight } from "react-icons/fa"; // Utilisation d'alias pour éviter les doublons
+import { FaEnvelope as EnvelopeIcon, FaWhatsapp as WhatsappIcon, FaFacebookMessenger as MessengerIcon, FaArrowRight } from "react-icons/fa"; 
+import React from 'react';
 import "./contact.css";
 
 const Contact = () => {

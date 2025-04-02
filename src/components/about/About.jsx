@@ -1,6 +1,6 @@
 import Intro from "./Intro";
 import "./about.css";
-
+import React from 'react';
 const About = () => {
   return (
     <section className="about section" id="about">

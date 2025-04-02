@@ -1,4 +1,4 @@
-
+import React from 'react';
 const Intro = () => {
   return (
     <div className="about__info grid">

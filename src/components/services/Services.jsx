@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./services.css";
+import React from 'react';
 const Services = () => {
   const [toggleState, setToggleState] = useState(0);
 

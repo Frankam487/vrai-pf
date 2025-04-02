@@ -1,7 +1,7 @@
 import Img1 from "../../assets/clouds.jpg";
 import Img2 from "../../assets/clouds.jpg";
 import Img3 from "../../assets/clouds.jpg";
-
+import React from 'react';
 
 export const Data = [
   {

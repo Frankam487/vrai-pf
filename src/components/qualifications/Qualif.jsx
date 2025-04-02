@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./qualif.css";
-
+import React from 'react';
 const qualifications = {
   education: [
     {

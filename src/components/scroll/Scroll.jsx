@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./scroll.css";
-
+import React from 'react';
 const Scroll = () => {
   const [isVisible, setIsVisible] = useState(false);
 

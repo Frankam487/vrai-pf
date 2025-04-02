@@ -2,7 +2,8 @@ import "./iconss.css";
 import "./home.css";
 import DiscoverButton from "../../page/DiscoverButton";
 import { useState } from "react";
-import { FaFacebook, FaWhatsapp, FaGithub } from 'react-icons/fa'; // Import des icônes
+import { FaFacebook, FaWhatsapp, FaGithub } from 'react-icons/fa'; 
+import React from 'react';
 
 const Home = () => {
   const [showDiscover, setShowDiscover] = useState(false);
