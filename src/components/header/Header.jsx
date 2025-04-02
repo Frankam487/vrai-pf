@@ -15,7 +15,8 @@ const [active, setActive] = useState("#home")
       <nav className="nav container">
         <a href="index.html" className="nav__logo">
           Frankam.
-          <h1>okkkkkkoko</h1>
+          <span>.</span>
+
         </a>
 
         <div className={toggle ? "nav__menu show-menu" : "nav__menu"}>
